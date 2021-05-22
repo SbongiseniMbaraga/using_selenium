@@ -10,6 +10,7 @@ get_upcoming_events = driver.find_elements_by_css_selector(".event-widget time")
 get_upcoming_events_names = driver.find_elements_by_css_selector(".event-widget li a")
 events = {}
 
+#add multiple entries into a dictionary
 for n in range(len(get_upcoming_events)):
     events[n] = {
         "time": get_upcoming_events[n].text,
